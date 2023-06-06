@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> show details</title>
+</head>
+<style>
+    body{
+        background: -webkit-linear-gradient( right,#2980b9,#8e44ad);
+    }
+    .flex-box{
+        display: flex;
+        width: 1000px;
+        margin: 20px auto;
+    }
+    .left{
+        width: 50px;
+    }
+    .big-img{
+        width: 250px;
+    }
+    .big-img img{
+        width: inherit;
+    }
+    .images{
+        display: block;
+        justify-content: space-between;
+        width: 50%;
+        margin-top: 15px;
+    }
+    .small-img{
+        width: 50px;
+    }
+    .small-img img {
+        width: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .small-img:hover img{
+        transform: scale(1.2);
+    }
+.right{
+    left: 66px;
+     position: absolute;
+     
+}
+.url{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(255, 102, 0);
+}
+.pname{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 50px;
+}
+.price{ 
+    font-size: 30px;
+    font-weight: 500;
+    margin: 20px 0;
+
+}
+.size{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.size p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.psize{
+    width: 80px;
+    border: 1px solid #ff5e00;
+    color: #000;
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+}
+ .psize.active{
+    border-width: 1.5px;
+    color: #ff5e00;
+    font-weight: 500;
+ }
+ .quantity{
+    display: flex;
+ }
+ .quantity p{
+    font-size: 18px;
+    font-weight: 500;
+
+ }
+ .quantity input{
+    width: 50px;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 15px;
+ }
+ .btn-box{
+    display: flex;
+    margin-top: 40px ;
+ }
+ .btn-box button{
+    font-size: 18px;
+    padding: 8px 25px;
+    border: none;
+    outline: auto;
+    border-radius: 6px; 
+    cursor: pointer;
+    color: white;
+ }
+ .cart-btn{
+    background-color: #ff5e00;
+    margin-right: 20px;
+ }
+ .buy-btn{
+    background-color: #00aeff;
+ }
+ .cart-btn:hover{
+    background-color: #ff3c00;
+ }
+ .buy-btn:hover{
+    background-color: #0066ff;
+ }
+</style>
+<body>
+    <h1 style="color: #ff6600;"> Our best product</h1>
+    <div class="flex-box">
+        <div class="left"> 
+            <div class="big-img"></div>
+           
+            <img src="bag1.jpg" onclick="showImg(this.src)" style="width: 840px ;left:  23px; position: absolute; height: 724px; border-radius: 43px;   ">
+        </div>
+        <div class="images" style="margin-top: -9px; margin-left:  auto;">
+            <div class="small-img" style="display: inline-flexbox;"  >
+                <img src="bag2.jpg" onclick="showImg(this.src)" style="width: 200px; left: 50px; position: relative; border-radius: 32px;" >
+            </div> 
+            <div class="images">
+                <div class="small-img">
+                    <img src="bag3.jpg" onclick="showImg(this.src)" style="width: 200px; left: 60px; position: relative; border-radius: 32px;" >
+                </div>
+                <div class="images">
+                    <div class="small-img">
+                        <img src="bag4.jpg" onclick="showImg(this.src)"  style="width: 200px; left: 60px; position: relative;border-radius: 32px;" >
+                    </div>
+                    <div class="images">
+                        <div class="small-img">
+                            <img src="bag5.jpg" onclick="showImg(this.src)" style="width: 200px; left: 60px; position: relative; border-radius: 32px;"  >
+                        </div>
+                        
+        </div>
+        
+        <div class="right" style="left: 66px; position: absolute;  ">
+             <div class="url" style="font-size: xx-large;  ">product > Bags</div> 
+            <div class="pname" style="font-style: italic ; ">Bags for Colleges & Travelling</div>
+            <div class="rating" style="font-size: 53px;">
+                <k style="color: orange;">***</k>**
+            </div>
+            <div class="Price" style="font-size: 33px;">$699</div>
+            <div class="size">
+                <P>Size : </P>
+                <div class="psize">M</div>
+                <div class="psize">L</div>
+                <div class="psize">XL</div>
+                <div class="psize">XXL</div>
+            </div>
+            <div class="quantity">
+                <p>quantity :</p>
+                <input type="number" min="1" max="10" value="1">
+            </div>
+            <div class="btn-box">
+                <button class="cart-btn">Add to Cart</button>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+     
+    <script>
+        let bigImg = document.querySelector('.big-img img');
+        function showImg(pic){
+            bigImg.src = pic;
+        }
+    </script>
+</body>
+</html> 
